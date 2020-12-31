@@ -1,0 +1,209 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+/* Index */
+
+.index {
+    position: absolute;
+    height: 100%;
+}
+
+.index-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+}
+
+.leftindex {
+    box-sizing: border-box;
+    background-color: rgb(61, 209, 61);
+    display: grid;
+    align-content: center;
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.5rem;
+}
+
+.leftindex-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+
+}
+
+.leftindex-grid-item {
+    padding: 1rem 0;
+    white-space: nowrap
+}
+
+.rightindex {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    text-align: center;
+}
+
+.index-login-form {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 5% 10%;
+    justify-content: space-between;
+}
+
+.fa-crow {
+    color: rgb(61, 209, 61);
+    justify-self: start;
+    font-size: 3rem;
+}
+
+.index-tagline {
+    text-align: start;
+    padding: 0 20%;
+}
+
+.index-auth-btns {
+    padding: 0 20%;
+}
+
+.calltoaction {
+    text-align: start;
+    font-weight: bold;
+}
+
+.index-signup-btn {
+    background-color: rgb(61, 209, 61);
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    height: 3rem;
+    width: 100%;
+}
+
+.index-login-btn {
+    background-color: white;
+    border-radius: 2rem;
+    border: 0.13rem solid rgb(61, 209, 61);
+    cursor: pointer;
+    height: 3rem;
+    width: 100%;
+}
+
+.index-signup-btn:hover {
+    background-color: rgb(52, 180, 52);
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.index-login-btn:hover {
+    background-color: rgb(61, 209, 61, 0.2);
+    border-radius: 2rem;
+    border: 0.13rem solid rgb(61, 209, 61);
+    cursor: pointer;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 2rem;
+    background-color: white;
+}
+
+.footer-text {
+    text-align: center;
+    width: 100vw;
+}
+
+/* Login Form */
+
+.loginform-page {
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    width: 25%;
+}
+
+.loginform-btn {
+    background-color: rgb(61, 209, 61);
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    height: 3rem;
+    width: 100%;
+}
+
+.loginform-btn:hover {
+    background-color: rgb(52, 180, 52);
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Signup Form */
+
+.signupform-page {
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    width: 25%;
+}
+
+.signupform-btn {
+    background-color: rgb(61, 209, 61);
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    height: 3rem;
+    width: 100%;
+}
+
+.signupform-btn:hover {
+    background-color: rgb(52, 180, 52);
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Error Notice */
+
+.error-notice {
+    background-color: white;
+    color: red;
+}
+
+.error-notice-btn {
+    border-radius: 2rem;
+    border: none;
+    background-color: white;
+    
+    cursor: pointer;
+}
+
+/* Home */
+
+.home-page {
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    width: 25%;
+}
+
+.logout-btn {
+        background-color: rgb(61, 209, 61);
+        border-radius: 2rem;
+        border: none;
+        cursor: pointer;
+        height: 3rem;
+        width: 100%;
+}
+    
+.logout-btn:hover {
+        background-color: rgb(52, 180, 52);
+        border-radius: 2rem;
+        border: none;
+        cursor: pointer;
+}
