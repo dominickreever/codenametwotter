@@ -24,7 +24,7 @@ export default function RightIndex() {
             password
         };
         const loginRes = await Axios.post(
-            "http://localhost:9000/login",
+            "/login",
             loginUser
         );
         setUserData({

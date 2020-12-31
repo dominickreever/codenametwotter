@@ -1,11 +1,10 @@
 import React, { useState, useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
 import Axios from 'axios';
 import ErrorNotice from '../layout/ErrorNotice';
 
-export default function SignupForm() {
-    const [name, setName] = useState();
+export default function LoginForm() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [error, setError] = useState();
@@ -16,18 +15,13 @@ export default function SignupForm() {
     const submit = async (e) => {
         e.preventDefault();
         try {
-                    const newUser = {
-            name,
+            const loginUser = {
             email,
             password
         };
-        await Axios.post(
-            "http://localhost:9000/signup",
-            newUser
-        );
         const loginRes = await Axios.post(
-            "http://localhost:9000/login",
-            { email, password }
+            "/login",
+            loginUser
         );
         setUserData({
             token: loginRes.data.token,
@@ -42,21 +36,21 @@ export default function SignupForm() {
     };
 
     return (
-        <div className="signupform-page">
+        <div className="loginform-page">
             <i className="fas fa-crow"></i>
-            <h1>Create your account</h1>
+            <h1>Log in to Twotter</h1>
             {error && (<ErrorNotice message={error} clearError={() => setError(undefined)} />)}
             <form onSubmit={submit}>
-                <input id="signup-name" placeholder="Name" type="text" onChange={e => setName(e.target.value)}></input>
+                <input id="login-email" placeholder="Email" type="email" onChange={e => setEmail(e.target.value)}></input>
                 <br></br>
                 <br></br>
-                <input id="signup-email" placeholder="Email" type="email" onChange={e => setEmail(e.target.value)}></input>
+                <input id="login-password" placeholder="Password" type="text" onChange={e => setPassword(e.target.value)}></input>
                 <br></br>
                 <br></br>
-                <input id="signup-password" placeholder="Password" type="text" onChange={e => setPassword(e.target.value)}></input>
+                <input className="loginform-btn" type="submit" value="Log in" />
                 <br></br>
                 <br></br>
-                <input className="signupform-btn" type="submit" value="Sign up" />
+                <Link to="/signup">Sign up for Twotter</Link>
             </form>
         </div>
     )

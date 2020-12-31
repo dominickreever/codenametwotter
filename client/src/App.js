@@ -25,7 +25,7 @@ export default function App() {
             { headers: {"x-auth-token": token} });
 
             if (tokenRes.data) {
-                let userRes = await Axios.get("/users/",
+                let userRes = await Axios.get("/users",
                 null,
                 { headers: { "x-auth-token": token }},
                 );

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import UserContext from '../../context/UserContext';
-import SideNavbar from '../layout/SideNavbar';
 
 export default function Home() {
     const { userData, setUserData } = useContext(UserContext);

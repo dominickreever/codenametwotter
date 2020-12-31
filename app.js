@@ -6,6 +6,8 @@ var mongoose = require('mongoose');
 var cors = require('cors');
 require('dotenv').config();
 
+const PORT = process.env.PORT || 5000;
+
 var indexRouter = require('./routes/index');
 var signupRouter = require('./routes/signup');
 var loginRouter = require('./routes/login');
@@ -32,11 +34,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('client/build'));
 
-app.use('/', indexRouter);
 app.use('/signup', signupRouter);
 app.use('/login', loginRouter);
 app.use('/users', usersRouter);
+app.use('/', indexRouter);
+
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
+})
 
 module.exports = app;
